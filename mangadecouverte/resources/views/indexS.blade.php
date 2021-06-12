@@ -1,11 +1,11 @@
 @extends('layout.layout')
 
 @section('titrePage')
-    Liste des Dessinateurs
+    Liste des Scenaristes
 @endsection
 
 @section('titreItem')
-    <h1>Tous les Dessinateurs :</h1>
+    <h1>Tous les Scenaristes :</h1>
 @endsection
 
 @section('contenu')
@@ -15,11 +15,11 @@
             <th>Nom</th>
             <th>Prenom</th>
         </thead>
-        @foreach($dessinateurs as $dessinateur)
+        @foreach($scenaristes as $scenariste)
             <tr>
-                <td> {{ $dessinateur->id_dessinateur }} </td>
-                <td> {{ $dessinateur->nom_dessinateur }} </td>
-                <td> {{ $dessinateur->prenom_dessinateur }} </td>
+                <td> {{ $scenariste->id_scenariste }} </td>
+                <td> {{ $scenariste->nom_scenariste }} </td>
+                <td> {{ $scenariste->prenom_scenariste }} </td>
             </tr>
         @endforeach
     </table>

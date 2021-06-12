@@ -12,7 +12,11 @@ class Manga extends Model
 
     public function getAll()
     {
-        $mangas = DB::table('manga')->get();
+        // $mangas = DB::table('manga')->get();
+        $mangas = DB::table('manga')->select('id_manga','titre','prix','lib_genre','nom_dessinateur','prenom_dessinateur')
+        ->join('dessinateur','dessinateur.id_dessinateur','=','manga.id_dessinateur')
+        ->join('genre', 'genre.id_genre', '=', 'manga.id_genre')
+        ->get();
         return $mangas;
     }
 }

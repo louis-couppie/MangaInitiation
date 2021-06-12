@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Manga;
+use App\Models\Dessinateur;
 use Illuminate\Http\Request;
 
 class MangaController extends Controller
@@ -15,7 +16,10 @@ class MangaController extends Controller
     public function index()
     {
         $manga = new Manga();
+        $dessinateur = new Dessinateur();
 	    $mangas = $manga->getAll();
+        $dessinateurs = $dessinateur->getAll();
+
 	    return view('index',compact('mangas'));
     }
 
