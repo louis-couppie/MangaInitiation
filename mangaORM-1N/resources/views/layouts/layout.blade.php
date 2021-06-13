@@ -22,12 +22,16 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{url('/mangas')}}">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url('/collections')}}">Nos collections</a>
+                        </li>
                         <li>
                             <a class="nav-link" href="https://www.senscritique.com/bd/actualite/manga">Actualités</a>
                         </li>
                         <li>
                             <a class="nav-link" href="https://www.senscritique.com/bd/actualite/manga">Comics</a>
                         </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Voir...
