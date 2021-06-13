@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Manga;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MangaController;
+use App\Http\Controllers\TestFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('mangas',App\Http\Controllers\MangaController::class);
+Route::resource('mangas',MangaController::class);
+
+Route::get('testformulaire', [TestFormController::class, 'getInfos']);
+Route::post('testformulaire', [TestFormController::class, 'postInfos']);
