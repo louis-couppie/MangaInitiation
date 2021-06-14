@@ -15,11 +15,20 @@ use App\Http\Controllers\TestFormController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+route::get('/',[MangaController::class,'index']);
+route::get('/dashboard',[MangaController::class,'index']);
+
+//Route::get('/dashboard', function () {
+//   return view('dashboard');
+//})->middleware(['auth'])->name('dashboard');
 
 Route::resource('mangas',MangaController::class);
 
 Route::get('testformulaire', [TestFormController::class, 'getInfos']);
 Route::post('testformulaire', [TestFormController::class, 'postInfos']);
+
+require __DIR__.'/auth.php';
